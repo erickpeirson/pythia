@@ -2,7 +2,10 @@
 title: Pythia Online
 email: erick.peirson@asu.edu
 description: > # this means to ignore newlines until "baseurl:"
-  Fro the trenches of computational history of science.
+  From the trenches of computational humanities.
+long_description: >
+  A collection of bite-size forrays into computational analysis and infrastructure 
+  development for history and philosophy of science.
 baseurl: "/pythia/" # the subpath of your site, e.g. /blog/
 url: "http://erickpeirson.github.io" # the base hostname & protocol for your site
 twitter_username: captbarberousse
@@ -10,3 +13,4 @@ github_username:  erickpeirson
 
 # Build settings
 markdown: kramdown
+excerpt_separator: <!--more-->
