@@ -16,7 +16,7 @@
 							<a href="" class="icon fa-bar-chart-o"><span>Archive</span></a>
 							<ul>
 								{% for tag in site.categories %}
-								<li>{% categorylink tag[0] %}{{ tag[0] | capitalize }}{% endcategorylink %}</li>
+								<li><a href="{{site.baseurl}}/category/{{tag[0]}}/">{{ tag[0] | capitalize }}</a></li>
 								{% endfor %}
 							</ul>
 						</li>
