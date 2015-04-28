@@ -1,0 +1,12 @@
+# Site settings
+title: Pythia Online
+email: erick.peirson@asu.edu
+description: > # this means to ignore newlines until "baseurl:"
+  Dispatches from the front lines of computational history of science.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://pythia.github.io" # the base hostname & protocol for your site
+twitter_username: captbarberousse
+github_username:  erickpeirson
+
+# Build settings
+markdown: kramdown
