@@ -3,12 +3,21 @@ layout: default
 ---
 
 
-
+		<!-- Banner -->
+			<div id="banner-wrapper">
+				<div class="inner">
+					<section id="banner" class="container">
+						<p>{{ site.long_description }}</p>
+					</section>
+				</div>
+			</div>
+			
 <!-- Main -->
 			<div id="main-wrapper">
 				<div id="main" class="container">
 					<div class="row">
-					
+
+
 						<!-- Content -->
 							<div id="content" class="8u">
 
@@ -16,17 +25,18 @@ layout: default
 								   {% for post in site.posts %}
 									<article class="box post">
 										<header>
-											<h2><a href="#">{{ post.title }}</a></h2>
+											<h2><a href="{{ post.url | prepend: site.baseurl  }}" class="post-title">{{ post.title }}</a></h2>
 										</header>
-										<a href="#" class="image featured"><img src="images/{% if post.image %}{{ post.image }}{% else %}pic01.jpg{% endif %}" alt="" /></a>
+										{% if post.image %}
+											<a href="{{ post.url | prepend: site.baseurl  }}" class="image featured"><img src="{{ baseurl}}images/{{ post.image }}" alt="" /></a>
+										{% endif %}
 										<h3>{{ post.subtitle }}</h3>
 										<p>{{ post.excerpt }}</p>
 										<ul class="actions">
-											<li><a href="{{ post.url }}" class="button icon fa-file">Continue Reading</a></li>
+											<li><a href="{{ post.url | prepend: site.baseurl  }}" class="button icon fa-file">Continue Reading</a></li>
 										</ul>
 									</article>
 									{% endfor %}
-
 							</div>
 							
 						<!-- Sidebar -->
@@ -35,87 +45,45 @@ layout: default
 								<!-- Excerpts -->
 									<section>
 										<ul class="divided">
+											{% for post in site.posts %}
 											<li>
 
 												<!-- Excerpt -->
+
 													<article class="box excerpt">
 														<header>
-															<span class="date">July 30</span>
-															<h3><a href="#">Just another post</a></h3>
+															<span class="date">{{post.date }}</span>
+															<h3><a href="{{ post.url | prepend: site.baseurl  }}">{{ post.title }}</a></h3>
 														</header>
-														<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est 
-														suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
+														<p>{{ post.short }}</p>
 													</article>
 
 											</li>
-											<li>
-
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<header>
-															<span class="date">July 28</span>
-															<h3><a href="#">And another post</a></h3>
-														</header>
-														<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est 
-														suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-													</article>
-
-											</li>
-											<li>
-
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<header>
-															<span class="date">July 24</span>
-															<h3><a href="#">One more post</a></h3>
-														</header>
-														<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est 
-														suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-													</article>
-
-											</li>
+											{% endfor %}
 										</ul>
 									</section>
 							
 								<!-- Highlights -->
 									<section>
 										<ul class="divided">
+											{% for post in site.categories.highlight %}
 											<li>
 
 												<!-- Highlight -->
 													<article class="box highlight">
 														<header>
-															<h3><a href="#">Something of note</a></h3>
+															<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
 														</header>
-														<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
-														<p>Phasellus  sed laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam 
-														viverra sit amet mollis tortor congue magna lorem ipsum dolor et quisque ut odio facilisis 
-														convallis. Etiam non nunc vel est suscipit convallis non id orci. Ut interdum tempus 
-														facilisis convallis. Etiam non nunc vel est suscipit convallis non id orci.</p>
+														<a href="#" class="image left"><img src="images/{% if post.image %}{{ post.image }}{% else %}pic01.jpg{% endif %}" alt="" /></a>
+														<p>{{ post.short }}</p>
 														<ul class="actions">
-															<li><a href="#" class="button icon fa-file">Learn More</a></li>
+															<li><a href="{{ post.url }}" class="button icon fa-file">Learn More</a></li>
 														</ul>
 													</article>
 
 											</li>
-											<li>
+											{% endfor %}
 
-												<!-- Highlight -->
-													<article class="box highlight">
-														<header>
-															<h3><a href="#">Something of less note</a></h3>
-														</header>
-														<a href="#" class="image left"><img src="images/pic07.jpg" alt="" /></a>
-														<p>Phasellus  sed laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam 
-														viverra sit amet mollis tortor congue magna lorem ipsum dolor et quisque ut odio facilisis 
-														convallis. Etiam non nunc vel est suscipit convallis non id orci. Ut interdum tempus 
-														facilisis convallis. Etiam non nunc vel est suscipit convallis non id orci.</p>
-														<ul class="actions">
-															<li><a href="#" class="button icon fa-file">Learn More</a></li>
-														</ul>
-													</article>
-
-											</li>
 										</ul>
 									</section>
 							
