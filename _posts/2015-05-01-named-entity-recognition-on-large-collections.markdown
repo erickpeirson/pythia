@@ -3,6 +3,7 @@ layout:	post
 title: 	Named Entity Recognition on Large Collections from Python
 date:		2015-05-01 11:52:38
 categories:	Python	NER
+image: "ner_tags.png"
 short: 	"In this post I'll describe how to use the Stanford NER classifier to perform Named Entity Recognition on a large collection of texts, in Python."
 ---
 
@@ -23,7 +24,25 @@ You'll need to download the [Stanford NER package](http://nlp.stanford.edu/softw
 The contents should look something like this:
 
 ```
-build.xmlclassifierslibLICENSE.txtner-gui.batner-gui.commandner-gui.shner.batner.shNERDemo.javaREADME.txtsample-conll-file.txtsample-w-time.txtsample.ner.txtsample.txtstanford-ner-3.5.2-javadoc.jarstanford-ner-3.5.2-sources.jarstanford-ner-3.5.2.jarstanford-ner.jar
+build.xml
+classifiers
+lib
+LICENSE.txt
+ner-gui.bat
+ner-gui.command
+ner-gui.sh
+ner.bat
+ner.sh
+NERDemo.java
+README.txt
+sample-conll-file.txt
+sample-w-time.txt
+sample.ner.txt
+sample.txt
+stanford-ner-3.5.2-javadoc.jar
+stanford-ner-3.5.2-sources.jar
+stanford-ner-3.5.2.jar
+stanford-ner.jar
 ```
 
 ### Java JDK
