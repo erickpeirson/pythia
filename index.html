@@ -28,7 +28,7 @@ layout: default
 											<h2><a href="{{ post.url | prepend: site.baseurl  }}" class="post-title">{{ post.title }}</a></h2>
 										</header>
 										{% if post.image %}
-											<a href="{{ post.url | prepend: site.baseurl  }}" class="image featured"><img src="{{ baseurl}}images/{{ post.image }}" alt="" /></a>
+											<a href="{{ post.url | prepend: site.baseurl  }}" class="image featured"><img src="{{ site.baseurl}}images/{{ post.image }}" alt="" /></a>
 										{% endif %}
 										<h3>{{ post.subtitle }}</h3>
 										<p>{{ post.excerpt }}</p>

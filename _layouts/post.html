@@ -3,7 +3,7 @@ layout: default
 ---
 <div id="main-wrapper">
 	<div id="main" class="container">
-		<div class="row">
+		<div>
 			<div id="content">
 				<article class="box post">
 					<header>
@@ -11,7 +11,7 @@ layout: default
 						<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 					</header>
 					{% if page.image %}
-					<span class="image featured"><img src="{{ site.baseurl }}/images/{{ page.image }}"/></span>
+					<span><img  class="image featured" src="{{ site.baseurl }}/images/{{ page.image }}"/></span>
 					{% endif %}
 					{% if page.subtitle %}
 					<h3>{{ page.subtitle }}</h3>
