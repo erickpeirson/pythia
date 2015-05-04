@@ -13,8 +13,12 @@ academia_username: erickpeirson
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 excerpt_separator: <!--more-->
 paginate: 5
+
+kramdown:
+  input: GFM
 
 category_archive:
   slugify: true
