@@ -5,6 +5,7 @@ date:		2015-05-01 11:52:38
 categories:	Python
 image: "ner_tags_crop.png"
 short: 	"In this post I'll describe how to use the Stanford NER classifier to perform Named Entity Recognition on a large collection of texts, in Python."
+notebook:   "http://nbviewer.ipython.org/github/erickpeirson/pythia/blob/master/2015-01-01-named-entity-recognition-on-large-collections.ipynb"
 ---
 
 Named Entity Recognition is the problem of locating and categorizing chunks of text that refer to...well...entities. "Entities" usually means things like people, places, organizations, or organisms, but can also include things like currency, recipe ingredients, or any other class of concepts to which a text might refer. NER has a wide range of applications in text mining. Recently, for example, I worked with researchers at the Max Planck Institute for the History of Science to extract names of people from meeting minutes in their instutional archives, in order to identify patterns of cooperation in committees and subcommittees. I frequently use NER to identify organisms mentioned in scientific publications. 

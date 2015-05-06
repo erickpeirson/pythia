@@ -27,6 +27,9 @@ layout: default
 										<header>
 											<h2><a href="{{ post.url | prepend: site.baseurl  }}" class="post-title">{{ post.title }}</a></h2>
 										</header>
+                                        {% if post.notebook %}
+                                        <div style="margin-bottom:10px;"><span><a href="{{ post.notebook }}" style="border:0px;">View in iPython</a></span></div>
+                                        {% endif %}										
 										{% if post.image %}
 											<a href="{{ post.url | prepend: site.baseurl  }}" class="image featured"><img src="{{ site.baseurl}}images/{{ post.image }}" alt="" /></a>
 										{% endif %}

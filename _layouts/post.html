@@ -10,6 +10,9 @@ layout: default
 						<h2 class="post-title">{{ page.title }}</h2>
 						<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 					</header>
+					{% if page.notebook %}
+					<div class="notebook-link"><span class="notebook-link-inner"><a href="{{site.baseurl}}/{{ page.notebook }}">View in iPython</a></span></div>
+					{% endif %}
 					{% if page.image %}
 					<span><img  class="image featured" src="{{ site.baseurl }}/images/{{ page.image }}"/></span>
 					{% endif %}
